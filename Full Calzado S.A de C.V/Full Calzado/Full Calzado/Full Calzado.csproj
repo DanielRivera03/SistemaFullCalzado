@@ -1,0 +1,891 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2C8E8AB6-EA37-41D4-9701-4D4D5012C500}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Full_Calzado</RootNamespace>
+    <AssemblyName>Full Calzado</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="CircularProgressBar, Version=2.7.0.7, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.7.0.7\lib\net40\CircularProgressBar.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ConexcionBD, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\ConexcionBD.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=4.1.2.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administradores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administradores.Designer.cs">
+      <DependentUpon>Administradores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AtencionAlClienteFC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AtencionAlClienteFC.Designer.cs">
+      <DependentUpon>AtencionAlClienteFC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BienvenidaUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BienvenidaUsuarios.Designer.cs">
+      <DependentUpon>BienvenidaUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BloqueoSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BloqueoSesion.Designer.cs">
+      <DependentUpon>BloqueoSesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaFacturacionAmpliada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaFacturacionAmpliada.Designer.cs">
+      <DependentUpon>ConsultaFacturacionAmpliada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaEmpleadosAmpliada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaEmpleadosAmpliada.Designer.cs">
+      <DependentUpon>ConsultaEmpleadosAmpliada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaProductoAmpliadaBoton.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaProductoAmpliadaBoton.Designer.cs">
+      <DependentUpon>ConsultaProductoAmpliadaBoton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaProductoAmpliada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaProductoAmpliada.Designer.cs">
+      <DependentUpon>ConsultaProductoAmpliada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaUsuariosAmpliada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaUsuariosAmpliada.Designer.cs">
+      <DependentUpon>ConsultaUsuariosAmpliada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlComboboxGeneral.cs" />
+    <Compile Include="ControlConexion.cs" />
+    <Compile Include="ControlRutaNotificaciones.cs" />
+    <Compile Include="DatosEmpleadosFC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatosEmpleadosFC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="datosfactura.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>datosfactura.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DatosProductosFC.cs">
+      <DependentUpon>DatosProductosFC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DatosProductosFC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatosProductosFC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarCargos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarCargos.Designer.cs">
+      <DependentUpon>EliminarCargos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarEmpleados.Designer.cs">
+      <DependentUpon>EliminarEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarFactura.Designer.cs">
+      <DependentUpon>EliminarFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarProducto.Designer.cs">
+      <DependentUpon>EliminarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarRolesUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarRolesUsuarios.Designer.cs">
+      <DependentUpon>EliminarRolesUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarUsuarios.Designer.cs">
+      <DependentUpon>EliminarUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarVistaCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarVistaCategoria.Designer.cs">
+      <DependentUpon>EliminarVistaCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpleadosSistemaAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpleadosSistemaAdmin.Designer.cs">
+      <DependentUpon>EmpleadosSistemaAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Encriptar.cs" />
+    <Compile Include="FacturacionFullCalzado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FacturacionFullCalzado.Designer.cs">
+      <DependentUpon>FacturacionFullCalzado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormulariosPresidencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulariosPresidencia.Designer.cs">
+      <DependentUpon>FormulariosPresidencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormulariosRRHH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulariosRRHH.Designer.cs">
+      <DependentUpon>FormulariosRRHH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FullCalzadoDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FullCalzadoDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InicioInterfazAdmins.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InicioInterfazAdmins.Designer.cs">
+      <DependentUpon>InicioInterfazAdmins.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InicioInterfazAtencionClienteFC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InicioInterfazAtencionClienteFC.Designer.cs">
+      <DependentUpon>InicioInterfazAtencionClienteFC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="inicioInterfazFacturacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="inicioInterfazFacturacion.Designer.cs">
+      <DependentUpon>inicioInterfazFacturacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InicioInterfazHHRR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InicioInterfazHHRR.Designer.cs">
+      <DependentUpon>InicioInterfazHHRR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InicioInterfazPrecidencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InicioInterfazPrecidencia.Designer.cs">
+      <DependentUpon>InicioInterfazPrecidencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListadoDetalladoFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListadoDetalladoFactura.Designer.cs">
+      <DependentUpon>ListadoDetalladoFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListadoPersonalizadoEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListadoPersonalizadoEmpleados.Designer.cs">
+      <DependentUpon>ListadoPersonalizadoEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListadoPersonalizadoProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListadoPersonalizadoProductos.Designer.cs">
+      <DependentUpon>ListadoPersonalizadoProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListadoPersonalizadoUsuariosAdmins.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListadoPersonalizadoUsuariosAdmins.Designer.cs">
+      <DependentUpon>ListadoPersonalizadoUsuariosAdmins.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MensajeAlgoSalioMal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MensajeAlgoSalioMal.Designer.cs">
+      <DependentUpon>MensajeAlgoSalioMal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MensajeAprobacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MensajeAprobacion.Designer.cs">
+      <DependentUpon>MensajeAprobacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MensajeCierreSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MensajeCierreSesion.Designer.cs">
+      <DependentUpon>MensajeCierreSesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MensajeErrorCamposVacios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MensajeErrorCamposVacios.Designer.cs">
+      <DependentUpon>MensajeErrorCamposVacios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MensajeErrorDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MensajeErrorDB.Designer.cs">
+      <DependentUpon>MensajeErrorDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MensajeErrorDuplicados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MensajeErrorDuplicados.Designer.cs">
+      <DependentUpon>MensajeErrorDuplicados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MensajeErrorEliminarDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MensajeErrorEliminarDatos.Designer.cs">
+      <DependentUpon>MensajeErrorEliminarDatos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MensajeErrorLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MensajeErrorLogin.Designer.cs">
+      <DependentUpon>MensajeErrorLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MensajeExportarExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MensajeExportarExcel.Designer.cs">
+      <DependentUpon>MensajeExportarExcel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MensajeExportarPDF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MensajeExportarPDF.Designer.cs">
+      <DependentUpon>MensajeExportarPDF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MensajeLimpieza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MensajeLimpieza.Designer.cs">
+      <DependentUpon>MensajeLimpieza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MensajeNoseInsertaFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MensajeNoseInsertaFactura.Designer.cs">
+      <DependentUpon>MensajeNoseInsertaFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MensajeNoHayDatosQueCargar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MensajeNoHayDatosQueCargar.Designer.cs">
+      <DependentUpon>MensajeNoHayDatosQueCargar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MensajeNoSeleccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MensajeNoSeleccion.Designer.cs">
+      <DependentUpon>MensajeNoSeleccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MensajePreguntaAccionesWF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MensajePreguntaAccionesWF.Designer.cs">
+      <DependentUpon>MensajePreguntaAccionesWF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarEmpleados.Designer.cs">
+      <DependentUpon>ModificarEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarIdEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarIdEmpleado.Designer.cs">
+      <DependentUpon>ModificarIdEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarIdProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarIdProductos.Designer.cs">
+      <DependentUpon>ModificarIdProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarIdUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarIdUsuarios.Designer.cs">
+      <DependentUpon>ModificarIdUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarProducto.Designer.cs">
+      <DependentUpon>ModificarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarRolesUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarRolesUsuarios.Designer.cs">
+      <DependentUpon>ModificarRolesUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarUsuarios.Designer.cs">
+      <DependentUpon>ModificarUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarVistaCargo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarVistaCargo.Designer.cs">
+      <DependentUpon>ModificarVistaCargo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarVistaCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarVistaCategoria.Designer.cs">
+      <DependentUpon>ModificarVistaCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotificacionesPersonalizadas.cs" />
+    <Compile Include="NuevaVistaProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevaVistaProducto.Designer.cs">
+      <DependentUpon>NuevaVistaProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NuevoVistaFormaPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevoVistaFormaPago.Designer.cs">
+      <DependentUpon>NuevoVistaFormaPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NuevoVistaRoles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevoVistaRoles.Designer.cs">
+      <DependentUpon>NuevoVistaRoles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NuevoVistaTipoDoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevoVistaTipoDoc.Designer.cs">
+      <DependentUpon>NuevoVistaTipoDoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresidenciaAdministracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresidenciaAdministracion.Designer.cs">
+      <DependentUpon>PresidenciaAdministracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductosRegistradosAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductosRegistradosAdmin.Designer.cs">
+      <DependentUpon>ProductosRegistradosAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecursosHumanosDpto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecursosHumanosDpto.Designer.cs">
+      <DependentUpon>RecursosHumanosDpto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrarCargos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrarCargos.Designer.cs">
+      <DependentUpon>RegistrarCargos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteDañosFallosAverias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteDañosFallosAverias.Designer.cs">
+      <DependentUpon>ReporteDañosFallosAverias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteListadoEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteListadoEmpleados.Designer.cs">
+      <DependentUpon>ReporteListadoEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteListadoProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteListadoProducto.Designer.cs">
+      <DependentUpon>ReporteListadoProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteMontosTotalProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteMontosTotalProductos.Designer.cs">
+      <DependentUpon>ReporteMontosTotalProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteTotalPagoporCargo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteTotalPagoporCargo.Designer.cs">
+      <DependentUpon>ReporteTotalPagoporCargo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteVentasCCF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteVentasCCF.Designer.cs">
+      <DependentUpon>ReporteVentasCCF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteVentasDiarias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteVentasDiarias.Designer.cs">
+      <DependentUpon>ReporteVentasDiarias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteVentasEmpelado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteVentasEmpelado.Designer.cs">
+      <DependentUpon>ReporteVentasEmpelado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteVentasTD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteVentasTD.Designer.cs">
+      <DependentUpon>ReporteVentasTD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteVTpormes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteVTpormes.Designer.cs">
+      <DependentUpon>ReporteVTpormes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsuariosRegistradosSistema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsuariosRegistradosSistema.Designer.cs">
+      <DependentUpon>UsuariosRegistradosSistema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentasClientesFC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentasClientesFC.Designer.cs">
+      <DependentUpon>VentasClientesFC.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Administradores.resx">
+      <DependentUpon>Administradores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AtencionAlClienteFC.resx">
+      <DependentUpon>AtencionAlClienteFC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BienvenidaUsuarios.resx">
+      <DependentUpon>BienvenidaUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BloqueoSesion.resx">
+      <DependentUpon>BloqueoSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaFacturacionAmpliada.resx">
+      <DependentUpon>ConsultaFacturacionAmpliada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaEmpleadosAmpliada.resx">
+      <DependentUpon>ConsultaEmpleadosAmpliada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaProductoAmpliadaBoton.resx">
+      <DependentUpon>ConsultaProductoAmpliadaBoton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaProductoAmpliada.resx">
+      <DependentUpon>ConsultaProductoAmpliada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaUsuariosAmpliada.resx">
+      <DependentUpon>ConsultaUsuariosAmpliada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarCargos.resx">
+      <DependentUpon>EliminarCargos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarEmpleados.resx">
+      <DependentUpon>EliminarEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarFactura.resx">
+      <DependentUpon>EliminarFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarProducto.resx">
+      <DependentUpon>EliminarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarRolesUsuarios.resx">
+      <DependentUpon>EliminarRolesUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarUsuarios.resx">
+      <DependentUpon>EliminarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarVistaCategoria.resx">
+      <DependentUpon>EliminarVistaCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpleadosSistemaAdmin.resx">
+      <DependentUpon>EmpleadosSistemaAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FacturacionFullCalzado.resx">
+      <DependentUpon>FacturacionFullCalzado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulariosPresidencia.resx">
+      <DependentUpon>FormulariosPresidencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulariosRRHH.resx">
+      <DependentUpon>FormulariosRRHH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InicioInterfazAdmins.resx">
+      <DependentUpon>InicioInterfazAdmins.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InicioInterfazAtencionClienteFC.resx">
+      <DependentUpon>InicioInterfazAtencionClienteFC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inicioInterfazFacturacion.resx">
+      <DependentUpon>inicioInterfazFacturacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InicioInterfazHHRR.resx">
+      <DependentUpon>InicioInterfazHHRR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InicioInterfazPrecidencia.resx">
+      <DependentUpon>InicioInterfazPrecidencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListadoDetalladoFactura.resx">
+      <DependentUpon>ListadoDetalladoFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListadoEmpleado.rdlc" />
+    <EmbeddedResource Include="ListadoPersonalizadoEmpleados.resx">
+      <DependentUpon>ListadoPersonalizadoEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListadoPersonalizadoProductos.resx">
+      <DependentUpon>ListadoPersonalizadoProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListadoPersonalizadoUsuariosAdmins.resx">
+      <DependentUpon>ListadoPersonalizadoUsuariosAdmins.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MensajeAlgoSalioMal.resx">
+      <DependentUpon>MensajeAlgoSalioMal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MensajeAprobacion.resx">
+      <DependentUpon>MensajeAprobacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MensajeCierreSesion.resx">
+      <DependentUpon>MensajeCierreSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MensajeErrorCamposVacios.resx">
+      <DependentUpon>MensajeErrorCamposVacios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MensajeErrorDB.resx">
+      <DependentUpon>MensajeErrorDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MensajeErrorDuplicados.resx">
+      <DependentUpon>MensajeErrorDuplicados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MensajeErrorEliminarDatos.resx">
+      <DependentUpon>MensajeErrorEliminarDatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MensajeErrorLogin.resx">
+      <DependentUpon>MensajeErrorLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MensajeExportarExcel.resx">
+      <DependentUpon>MensajeExportarExcel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MensajeExportarPDF.resx">
+      <DependentUpon>MensajeExportarPDF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MensajeLimpieza.resx">
+      <DependentUpon>MensajeLimpieza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MensajeNoseInsertaFactura.resx">
+      <DependentUpon>MensajeNoseInsertaFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MensajeNoHayDatosQueCargar.resx">
+      <DependentUpon>MensajeNoHayDatosQueCargar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MensajeNoSeleccion.resx">
+      <DependentUpon>MensajeNoSeleccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MensajePreguntaAccionesWF.resx">
+      <DependentUpon>MensajePreguntaAccionesWF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarEmpleados.resx">
+      <DependentUpon>ModificarEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarIdEmpleado.resx">
+      <DependentUpon>ModificarIdEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarIdProductos.resx">
+      <DependentUpon>ModificarIdProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarIdUsuarios.resx">
+      <DependentUpon>ModificarIdUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarProducto.resx">
+      <DependentUpon>ModificarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarRolesUsuarios.resx">
+      <DependentUpon>ModificarRolesUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarUsuarios.resx">
+      <DependentUpon>ModificarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarVistaCargo.resx">
+      <DependentUpon>ModificarVistaCargo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarVistaCategoria.resx">
+      <DependentUpon>ModificarVistaCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevaVistaProducto.resx">
+      <DependentUpon>NuevaVistaProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevoVistaFormaPago.resx">
+      <DependentUpon>NuevoVistaFormaPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevoVistaRoles.resx">
+      <DependentUpon>NuevoVistaRoles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevoVistaTipoDoc.resx">
+      <DependentUpon>NuevoVistaTipoDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresidenciaAdministracion.resx">
+      <DependentUpon>PresidenciaAdministracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductosRegistradosAdmin.resx">
+      <DependentUpon>ProductosRegistradosAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="RecursosHumanosDpto.resx">
+      <DependentUpon>RecursosHumanosDpto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrarCargos.resx">
+      <DependentUpon>RegistrarCargos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report3.rdlc" />
+    <EmbeddedResource Include="Report4.rdlc" />
+    <EmbeddedResource Include="ReporteDañosFallosAverias.resx">
+      <DependentUpon>ReporteDañosFallosAverias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportedeDaños.rdlc" />
+    <EmbeddedResource Include="ReporteListadoEmpleados.resx">
+      <DependentUpon>ReporteListadoEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteListadoProducto.resx">
+      <DependentUpon>ReporteListadoProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteMontosTotalProductos.resx">
+      <DependentUpon>ReporteMontosTotalProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportePagoporTotalEmpleado.rdlc" />
+    <EmbeddedResource Include="ReporteProductos.rdlc" />
+    <EmbeddedResource Include="ReporteProdutoCate.rdlc" />
+    <EmbeddedResource Include="ReporteTotalPagoporCargo.resx">
+      <DependentUpon>ReporteTotalPagoporCargo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteVentasCCF.resx">
+      <DependentUpon>ReporteVentasCCF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteVentasDiarias.resx">
+      <DependentUpon>ReporteVentasDiarias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteVentasEmpelado.resx">
+      <DependentUpon>ReporteVentasEmpelado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteVentasTD.resx">
+      <DependentUpon>ReporteVentasTD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteVTpormes.resx">
+      <DependentUpon>ReporteVTpormes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsuariosRegistradosSistema.resx">
+      <DependentUpon>UsuariosRegistradosSistema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentasClientesFC.resx">
+      <DependentUpon>VentasClientesFC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentasEmpleado.rdlc" />
+    <None Include="DatosEmpleadosFC.xsc">
+      <DependentUpon>DatosEmpleadosFC.xsd</DependentUpon>
+    </None>
+    <None Include="DatosEmpleadosFC.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatosEmpleadosFC.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DatosEmpleadosFC.xss">
+      <DependentUpon>DatosEmpleadosFC.xsd</DependentUpon>
+    </None>
+    <None Include="datosfactura.xsc">
+      <DependentUpon>datosfactura.xsd</DependentUpon>
+    </None>
+    <None Include="datosfactura.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>datosfactura.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="datosfactura.xss">
+      <DependentUpon>datosfactura.xsd</DependentUpon>
+    </None>
+    <None Include="DatosProductosFC.xsc">
+      <DependentUpon>DatosProductosFC.xsd</DependentUpon>
+    </None>
+    <None Include="DatosProductosFC.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatosProductosFC.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DatosProductosFC.xss">
+      <DependentUpon>DatosProductosFC.xsd</DependentUpon>
+    </None>
+    <None Include="FullCalzadoDBDataSet.xsc">
+      <DependentUpon>FullCalzadoDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FullCalzadoDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FullCalzadoDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FullCalzadoDBDataSet.xss">
+      <DependentUpon>FullCalzadoDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
